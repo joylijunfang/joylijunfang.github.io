@@ -1,0 +1,63 @@
+body{
+    background-color:#F2f2f2;
+    /*text-align: center;*/
+}
+#content{
+    /*background-color: red;*/
+    text-align: center;
+    margin-top: 50px;
+   }
+#panel{
+    background-color:white;
+    display: inline-block;
+    /*margin-top: 20px;*/
+    padding: 7px;
+    border-radius: 5px;
+}
+#panel .group{
+    margin-top: 10px;
+}
+#panel .group label{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+#panel .group input{
+    height: 33px;
+    width: 250px;
+    padding-left: 7px;
+    font-size: 15px;
+}
+#content button{
+    font-size: 15px;
+    height: 33px;
+    color: white;
+    border: 0px;
+}
+#login button{
+    margin-top: 20px;
+    background-color: #cc865e;
+    width: 250px;
+}
+#login button:hover{
+    background-color: white;
+    border: 1px solid #cc865e;
+    /*border-color: #cc865e;*/
+    cursor: pointer;
+    color: #cc865e;
+}
+#reg button{
+    margin-top: 20px;
+    background-color: #4668AF;
+    width: 200px;
+}
+#reg button:hover{
+    background-color: white;
+    border: 1px solid  #4668AF;
+    /*border-color: #cc865e;*/
+    cursor: pointer;
+    color:  #4668AF;
+}
+
