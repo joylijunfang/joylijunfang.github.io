@@ -1,0 +1,296 @@
+html.fssopen, html.fssopen body{ /* class added to HTML element when full screen slider is open to hide potential body scrollbars */
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  margin: 0;
+	overflow: hidden;
+}
+
+section.dd_fullscreenslider{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 2000;
+	font-size: 16px; /* base font size */
+	visibility: visible;
+	overflow: hidden;
+}
+
+div.slidewrapper{ /* wrapper DIV that surrounds the ARTICLE elements inside .dd_fullscreenslider */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0); /* to prevent flickering in iOS */
+	-moz-transition: -moz-transform 0.5s; /* actual duration controlled by script */
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+ul.fssnav{ /* UL list dynamically added by script for Slider navigation */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+	position: fixed;
+	top: 50%; /* vertically center menu */
+	right: 20px; /* distance from right edge of screen */
+	transform: translateY(-50%); /* vertically center menu */
+}
+
+ul.fssnav li{
+  margin-bottom: 15px;
+}
+
+ul.fssnav li a{
+  text-decoration: none;
+  border: 5px solid white; /* border color of nav links */
+  border-radius: 50%;
+  width: 10px; /* dimensions of nav links */
+  height: 10px;
+  display: block;
+	position: relative;
+  text-indent: -500px;
+	outline: none;
+  overflow: hidden;
+}
+
+ul.fssnav li a::after{ /* create "fill" element inside A */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  background: white; /* color of "fill" element */
+  transition: top 0.5s; /* transition for "fill up" effect */
+}
+
+ul.fssnav li.selected a::after{
+  top: 0; /* fill up selected A element from bottom to top */
+}
+
+hr{
+    background: #cccccc;
+    width: 80%;
+    opacity: 0.5;
+    clear: both;
+}
+section.dd_fullscreenslider article.slide{ /* CSS for each slide */
+  width: 100%;
+  height: 100%;
+    padding-top: 100px;
+    text-align: center;
+	display: block;
+	font-family: 'Lato', sans-serif; /* Use google font */
+	font-size: 1.2em;
+	line-height: 2em;
+	color: white;
+	overflow: hidden;
+  -webkit-box-sizing: border-box; /* include padding/ border as part of declared menu width */
+  -moz-box-sizing: border-box;
+	z-index: 1000;
+  /*background: #E56464;*/
+    background: #22AFE2;
+	-webkit-transform: translate3d(0, 0, 0); /* to prevent flickering in iOS */
+}
+section.dd_fullscreenslider article.slide b{
+    font-size: 30px;
+    float: left;
+    margin-left: 15%;
+}
+section.dd_fullscreenslider article.slide img{
+
+    display: block;
+    /*background: url("../img/a0.jpg") no-repeat;*/
+    /*background: red;*/
+    background-image: url("../img/a0.jpg");
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+    /*background-size: cover;*/
+
+    animation-name:myfirst;
+    animation-duration:5s;
+    animation-timing-function:linear;
+    animation-delay:2s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-play-state:running;
+    /* Firefox: */
+    -moz-animation-name:myfirst;
+    -moz-animation-duration:5s;
+    -moz-animation-timing-function:linear;
+    -moz-animation-delay:2s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:alternate;
+    -moz-animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name:myfirst;
+    -webkit-animation-duration:5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+    /* Opera: */
+    -o-animation-name:myfirst;
+    -o-animation-duration:5s;
+    -o-animation-timing-function:linear;
+    -o-animation-delay:2s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-direction:alternate;
+    -o-animation-play-state:running;
+}
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(90deg);}
+    50%  {-webkit-transform: rotate(180deg);}
+    75%  {-webkit-transform: rotate(270deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes myfirst{
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(90deg);}
+    50%  {-webkit-transform: rotate(180deg);}
+    75%  {-webkit-transform: rotate(270deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */{
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(90deg);}
+    50%  {-webkit-transform: rotate(180deg);}
+    75%  {-webkit-transform: rotate(270deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-o-keyframes myfirst /* Opera */{
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(90deg);}
+    50%  {-webkit-transform: rotate(180deg);}
+    75%  {-webkit-transform: rotate(270deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+.introduction{
+    text-align: left;
+    /*border: 1px solid red;*/
+    color: black;
+    background: #fcffde;
+    border-radius: 5px;
+    /*position: relative;*/
+
+    -webkit-transform-origin: center center;
+}
+.w{
+    position: relative;
+    left: 20%;
+    width: 70%;
+
+}
+
+.tag {
+    text-align: left;
+
+}
+.tag p{
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 50px;
+    /*background: red;*/
+}
+.jdt{
+    /*float: right;*/
+    border-radius: 5px;
+    display: inline-block;
+    height: 15px;
+    width: 300px;
+    background-color: #fcffde;
+    z-index: 20;
+}
+.jdt span{
+    border-radius: 5px;
+    height: 15px;
+    display: block;
+    background: #ff956a;
+    z-index: 21;
+}
+.item p{
+    -webkit-transition: 250ms linear;
+}
+.item p:hover{
+    -webkit-transform-origin: bottom center;
+    -webkit-transform:scale(1.6);
+}
+section.dd_fullscreenslider article.slide h2{ /* H2 Header inside each slide */
+	font-size: 3em;
+	margin: 0;
+	line-height: 1.1em;
+	letter-spacing: 3px;
+}
+
+section.dd_fullscreenslider article.slide .scrollable{ /* Assign this class to elements within a slide that should be scrollable */
+	overflow: auto;
+}
+
+section.dd_fullscreenslider article.slide a{
+	color: white;
+    text-decoration: none;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(2){ /* 2nd demo slide bgcolor */
+	background: #22AFE2;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(3){ /* 3rd demo slide bgcolor */
+	background: #88D332;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(4){ /* 4th demo slide bgcolor */
+	background: #A36400;
+}
+
+section.dd_fullscreenslider div.closex{ /* Large x close button inside Slider */
+  width: 50px;
+  height: 50px;
+	overflow: hidden;
+  display: block;
+  position: fixed;
+  cursor: pointer;
+	text-indent: -1000px;
+	opacity: 0.8;
+  z-index: 1001;
+  top: 5px;
+  right: 3px;
+}
+
+section.dd_fullscreenslider div.closex::before, section.dd_fullscreenslider div.closex::after{ /* render large x inside close button */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: white; /* color of x button */
+  top: 50%;
+  margin-top: -3px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+section.dd_fullscreenslider div.closex::after{ /* render large cross inside close button */
+  -ms-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+ul{
+    list-style: none;
+}
