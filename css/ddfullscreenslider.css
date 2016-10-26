@@ -102,11 +102,12 @@ section.dd_fullscreenslider article.slide b{
     float: left;
     margin-left: 15%;
 }
-section.dd_fullscreenslider article.slide img{
+.first img{
 
     display: block;
     /*background: url("../img/a0.jpg") no-repeat;*/
     /*background: red;*/
+    background-size: cover;
     background-image: url("../img/a0.jpg");
     height: 100px;
     width: 100px;
@@ -180,24 +181,19 @@ section.dd_fullscreenslider article.slide img{
 
 .introduction{
     text-align: left;
-    /*border: 1px solid red;*/
-    color: black;
-    background: #fcffde;
+    /*color: black;*/
+    /*background: #fcffde;*/
     border-radius: 5px;
-    /*position: relative;*/
-
     -webkit-transform-origin: center center;
 }
 .w{
     position: relative;
     left: 20%;
     width: 70%;
-
 }
 
 .tag {
     text-align: left;
-
 }
 .tag p{
     display: inline-block;
@@ -223,12 +219,42 @@ section.dd_fullscreenslider article.slide img{
     background: #ff956a;
     z-index: 21;
 }
+
 .item p{
+    margin-top: 100px;
+    margin-left: 10px;
+    /*background: red;*/
+    text-align: center;
+    display: block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    float: left;
+    position: relative;
     -webkit-transition: 250ms linear;
 }
 .item p:hover{
     -webkit-transform-origin: bottom center;
-    -webkit-transform:scale(1.6);
+    -webkit-transform:scale(1.3);
+}
+.item img{
+    /*background: blue;*/
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px 25px;
+}
+.item a{
+    /*background: yellow;*/
+    text-align: center;
+    top: 15px;
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 50px;
 }
 section.dd_fullscreenslider article.slide h2{ /* H2 Header inside each slide */
 	font-size: 3em;

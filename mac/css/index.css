@@ -1,0 +1,110 @@
+a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var{
+    padding: 0px;
+    margin: 0px;
+}
+ul{
+    list-style: none;
+}
+body{
+    background: url("../images/apples.jpg");
+    background-size:cover;
+}
+#header{
+    background-color: rgb(241,241,241);
+    height: 28px;
+    opacity: 0.8;
+    box-shadow: 0px 0.5px 20px black;
+    line-height: 28px;
+}
+#header .header-left{
+    display: inline-block;
+    /*background-color: red;*/
+}
+#header .header-left li{
+   display: inline-block;
+    margin:0px 6px;
+    font-size: 16px;
+    font-weight: 200;
+}
+#header .header-right {
+    float: right;
+    /*background-color: red;*/
+}
+#header .header-right li{
+    margin:0px 6px;
+    font-size: 16px;
+}
+#header li:hover{
+    cursor: pointer;
+}
+#content{
+    /*background-color: red;*/
+}
+#content img{
+    width: 60px;
+    height: 60px;
+}
+#content p{
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+#content .flie1{
+    /*background-color: yellow;*/
+    display: block;
+    width: 60px;
+    /*text-align: center;*/
+    margin-top: 40px;
+    margin-left: 20px;
+}
+#content .flie1:hover{
+    cursor: pointer;
+}
+#footer{
+    position: absolute;
+    bottom: 0px;
+    /*background-color: red;*/
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+#footer .dock{
+    background:url("../images/dock_bg.png");
+    height: 100%;
+    width: 70%;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*line-height: 100%;*/
+    opacity: 0.8;
+    padding-top: 10px;
+    
+    /*margin-bottom: 5px;*/
+    /*text-align: center;*/
+}
+#footer .dock ul {
+    display: inline-block;
+    /*bottom: 0px;*/
+
+}
+#footer .dock img{
+    height: 50px;
+    width: 50px;
+}
+#footer .dock ul li{
+    display: inline-block;
+    /*height: 100%;*/
+    margin: 0px 8px;
+    /*line-height: 70%;*/
+    /*float: left;*/
+    /*margin-top: 10px;*/
+    /*background-color: red;*/
+
+    -webkit-transition: 250ms linear;
+}
+#footer .dock ul li:hover{
+    /*-webkit-transform: 0.5s;*/
+    -webkit-transform-origin: bottom center;
+    -webkit-transform:scale(1.6);
+}
